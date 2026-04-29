@@ -6,11 +6,11 @@ export const about = {
   },
 
   intro: {
-    tag: "Professional Journey",
-    title: "Architecting scalable and maintainable web systems",
-    description:
-      "With a Computer Science background and hands-on experience in Laravel and Vue.js, I focus on building production-ready systems that balance performance, scalability, and long-term maintainability."
-  },
+  tag: "Professional Journey",
+  title: "Building scalable and maintainable backend systems",
+  description:
+    "With a Computer Science background and hands-on experience in Laravel and ASP.Net Core, I build RESTful APIs, implement queue-based background processing, and design modular N-tier architectures. I focus on writing clean, testable, and maintainable code for production systems."
+},
 
   metrics: [
     {
@@ -40,7 +40,7 @@ export const about = {
     },
     {
       label: "Focus",
-      value: "Clean / N-Tier Architecture"
+      value: "Clean | N-Tier Architecture"
     }
   ]
 };

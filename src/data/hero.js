@@ -26,19 +26,22 @@ export const hero = {
   {
     name: "LinkedIn",
     url: "https://linkedin.com/in/wint-myat-phyo",
-    icon: LinkedInIcon
+    icon: LinkedInIcon,
+     color: "#0A66C2" // LinkedIn official
   },
   {
     name: "GitHub",
     url: "https://github.com/winmyatphyo99",
-    icon: GitHubIcon
+    icon: GitHubIcon,
+    color: "#ffffff", // default (visible)
+    hoverColor: "#181717"// GitHub official
   }
 ]
   },
 
   profile: {
     name: "Win Myat Phyo",
-    role: "Software Engineer",
+    role: "Full Stack Engineer",
     // image: "/assets/wmp.jpg"
   }
 };

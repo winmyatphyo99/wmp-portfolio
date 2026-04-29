@@ -51,7 +51,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center"
+  <section id="hero" class="relative py-32 overflow-hidden"
     style="background-color: #05070A !important;">
 
     <div class="absolute inset-0 bg-grid opacity-30"></div>
@@ -95,8 +95,10 @@ onMounted(() => {
             <div class="flex gap-3">
               <a v-for="social in hero.cta.socials" :key="social.name" :href="social.url" target="_blank"
                 class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-accent-orange/50 hover:bg-accent-orange/10 transition-all group">
-                <component :is="social.icon"
-                  class="text-white/60 group-hover:text-accent-orange transition-colors w-5 h-5" />
+                <component :is="social.icon" :color="social.color"
+                  class="w-5 h-5 transition-all group-hover:opacity-100"
+                  @mouseover="$event.target.style.fill = social.hoverColor"
+                  @mouseleave="$event.target.style.fill = social.color" />
               </a>
             </div>
           </div>

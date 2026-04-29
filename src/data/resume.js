@@ -39,7 +39,7 @@ export const resume = {
       {
         type: "project",
         period: "Project Highlight",
-        title: "POS & Order Management Architect",
+        title: "POS & Food Order Management System",
         tech: "Enterprise Solutions",
         points: [
           "Built multi-tenant POS system with real-time order tracking.",
