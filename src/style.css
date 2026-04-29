@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* =========================
+   DESIGN TOKENS (THEME SYSTEM)
+========================= */
+@theme {
+  /* ================= Fonts ================= */
+  --font-sans: 'Inter', 'Roboto', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+
+  /* ================= Typography ================= */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* ================= Spacing ================= */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ================= Radius ================= */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* ================= Layout ================= */
+  --container-max: 1200px;
+
+  /* ================= BASE COLORS (NEW MIDNIGHT PALETTE) ================= */
+  --color-bg-primary: #05070A;
+  --color-bg-secondary: #0F1117;
+  --color-surface: rgba(15, 17, 23, 0.6);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #64748B;
+
+  /* ================= ACCENT SYSTEM ================= */
+  --color-accent-purple: #A855F7;
+  --color-accent-cyan: #06B6D4;
+  --color-accent-blue: #3B82F6;
+  
+  /* Setting Default Accent */
+  --color-accent: var(--color-accent-purple);
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 20%, transparent);
+
+  /* ================= Shadow ================= */
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px var(--color-accent-soft);
+}
+
+/* =========================
+   SECTION ACCENTS & OVERRIDES
+========================= */
+#hero {
+  --color-accent: var(--color-accent-purple);
+}
+#about { --color-accent: var(--color-accent-cyan); }
+
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    line-height: 1.6;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+  }
+}
+
+/* =========================
+   UTILITIES (THEME BRIDGE)
+========================= */
+@layer utilities {
+
+  /* ----- Backgrounds ----- */
+  .bg-primary { background-color: var(--color-bg-primary); }
+  .bg-secondary { background-color: var(--color-bg-secondary); }
+  .bg-surface { background-color: var(--color-surface); }
+
+  /* ----- Text ----- */
+  .text-primary { color: var(--color-text-primary); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-muted { color: var(--color-text-muted); }
+  .text-gradient {
+    background: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-grid {
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    background-image: 
+      linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* ----- Accent Tools ----- */
+  .text-accent { color: var(--color-accent); }
+  .bg-accent { background-color: var(--color-accent); }
+  .bg-accent-soft { background-color: var(--color-accent-soft); }
+  .border-accent { border-color: var(--color-accent); }
+  
+  /* ----- Layout ----- */
+  .container-system {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+
+  /* ----- Custom Grid Pattern ----- */
+  .bg-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ----- Animations ----- */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
