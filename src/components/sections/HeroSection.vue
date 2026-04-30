@@ -76,10 +76,10 @@ onMounted(() => {
           </div>
 
           <div class="space-y-6">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
               {{ hero.title.line1 }}<br />
               <span class="text-gradient">{{ hero.title.highlight }}</span>
-            </h1>
+            </h2>
 
             <p class="text-lg text-slate-300 max-w-lg font-medium leading-relaxed">
               {{ hero.description.text }}

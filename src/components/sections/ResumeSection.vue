@@ -14,7 +14,6 @@ const downloadCV = (email) => {
 <template>
   <section 
     v-if="resume" 
-    id="resume" 
     class="py-24 bg-primary relative overflow-hidden border-t border-white/5"
   >
     <div class="absolute inset-0 bg-grid opacity-20"></div>
@@ -30,12 +29,12 @@ const downloadCV = (email) => {
             </span>
           </div>
 
-          <h2 class="text-4xl md:text-5xl font-bold text-primary tracking-tighter leading-[0.9]">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
             {{ resume.header.title.split(' ')[0] }}
             <span class="text-accent italic font-light">{{ resume.header.title.split(' ')[1] }}</span>
           </h2>
 
-          <p class="text-lg text-secondary leading-relaxed border-l-2 border-accent/30 pl-6">
+          <p class="text-base md:text-lg text-slate-400 max-w-lg font-medium leading-relaxed">
             {{ resume.header.description }}
           </p>
         </div>
@@ -61,10 +60,8 @@ const downloadCV = (email) => {
           <div v-for="(item, index) in resume.experience.items" :key="index" class="relative group">
             <div class="grid md:grid-cols-4 gap-6">
               <div class="md:col-span-1 space-y-1">
-                <p class="text-[10px] font-mono text-accent font-bold">{{ item.period }}</p>
-                <p v-if="item.type === 'work'" class="text-[9px] uppercase tracking-tighter text-muted group-hover:text-primary transition-colors">
-                  [ Verified_Entry ]
-                </p>
+                <p class="text-[10px] text-accent font-bold">{{ item.period }}</p>
+                
               </div>
 
               <div class="md:col-span-3 space-y-4">
@@ -102,7 +99,7 @@ const downloadCV = (email) => {
               <span 
                 v-for="skill in [...resume.skills.backend.items, ...resume.skills.frontend.items]" 
                 :key="skill"
-                class="px-3 py-1.5 text-[10px] font-mono border border-white/5 bg-primary text-secondary hover:border-accent/50 hover:text-accent transition-all cursor-default"
+                class="px-3 py-1.5 text-[12px]  border border-white/5 bg-primary text-secondary hover:border-accent/50 hover:text-accent transition-all cursor-default"
               >
                 {{ skill }}
               </span>
@@ -114,11 +111,11 @@ const downloadCV = (email) => {
                {{ resume.education.title }} <span class="h-px flex-1 bg-white/10"></span>
             </h3>
             <div v-for="edu in resume.education.items" :key="edu.degree" class="space-y-2 group">
-              <p class="text-sm font-bold text-primary group-hover:text-accent transition-colors leading-tight">
+              <p class="text-md font-bold text-primary group-hover:text-accent transition-colors leading-tight">
                 {{ edu.degree }}
               </p>
-              <p class="text-xs text-muted font-medium italic">{{ edu.school }}</p>
-              <p class="text-[10px] font-mono text-accent/70">{{ edu.period }}</p>
+              <p class="text-sm text-muted font-medium italic">{{ edu.school }}</p>
+              <p class="text-[12px] font-mono text-accent/70">{{ edu.period }}</p>
             </div>
           </div>
 
@@ -128,7 +125,7 @@ const downloadCV = (email) => {
                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                </span>
-               <span class="text-[9px] font-mono text-muted uppercase tracking-widest">Available for Architecture Consulting</span>
+               <span class="text-[9px] text-muted uppercase tracking-widest">Available for Architecture Consulting</span>
              </div>
           </div>
 

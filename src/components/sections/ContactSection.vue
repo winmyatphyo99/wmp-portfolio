@@ -16,86 +16,101 @@ const copyEmail = () => {
   <section
     v-if="contact"
     id="contact"
-    class="relative py-32 bg-[#04060C] overflow-hidden"
+    class="relative py-32 bg-primary overflow-hidden"
   >
     <!-- background glow -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(168,85,247,0.12),transparent_50%)]"></div>
 
     <div class="container-system relative z-10">
 
-      <!-- SaaS HEADER (CENTERED ONLY HERE) -->
+      <!-- HEADER (DATA DRIVEN) -->
       <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
 
-        <p class="text-xs uppercase tracking-[0.3em] text-purple-400">
-          Collaboration
+        <p class="text-xs uppercase tracking-[0.3em] text-accent">
+          {{ contact.header.status }}
         </p>
 
-        <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-primary leading-[1.2]">
           Let’s build something
-          <span class="text-gradient">meaningful</span>
+          <span class="text-gradient">{{ contact.header.highlight }}</span>
         </h2>
 
-        <p class="text-slate-400 text-sm leading-relaxed">
-          I design scalable backend systems, APIs, and architectures with performance and maintainability in mind.
+        <p class="text-secondary text-sm leading-relaxed">
+          {{ contact.intro.subtitle }}
         </p>
 
       </div>
 
-      <!-- MAIN GRID (SaaS STRUCTURE) -->
+      <!-- MAIN GRID -->
       <div class="grid lg:grid-cols-12 gap-12 items-start">
 
-        <!-- LEFT: capability / trust -->
-        <div class="lg:col-span-5 space-y-10">
+        <!-- LEFT -->
+        <div class="lg:col-span-5 space-y-10 relative">
 
-          <div class="space-y-4">
-            <p class="text-xs uppercase tracking-widest text-slate-500">
+          <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-purple-500/30 via-transparent to-transparent"></div>
+
+          <!-- CAPABILITIES (DATA DRIVEN) -->
+          <div class="pl-6 space-y-4">
+
+            <p class="text-xs uppercase tracking-widest text-muted">
               Capabilities
             </p>
 
-            <div class="flex flex-wrap gap-3">
-              <span class="chip">Laravel Architecture</span>
-              <span class="chip">API Design</span>
-              <span class="chip">Queue Systems</span>
-              <span class="chip">Database Optimization</span>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="cap in contact.capabilities"
+                :key="cap.name"
+                class="chip"
+              >
+                {{ cap.name }}
+              </span>
             </div>
+
           </div>
 
-          <div class="text-xs text-slate-600 font-mono">
-            Status: Available for selected projects • 2026
+          <!-- STATUS (DATA DRIVEN) -->
+          <div class="pl-6 status-live">
+            <span class="status-dot"></span>
+            <span>
+              {{ contact.status.value }} • {{ contact.status.year }}
+            </span>
           </div>
 
         </div>
 
-        <!-- RIGHT: PRIMARY CONTACT CARD -->
+        <!-- RIGHT -->
         <div class="lg:col-span-7">
 
           <div
             @click="copyEmail"
-            class="panel group cursor-pointer space-y-5"
+            class="card glass glow-hover p-10 space-y-6 cursor-pointer"
           >
 
+            <!-- EMAIL -->
             <div class="space-y-2">
-              <p class="panel-label">Primary Contact Channel</p>
+              <p class="text-xs uppercase tracking-[0.25em] text-muted">
+                {{ contact.email.label }}
+              </p>
 
-              <h3 class="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-400 transition break-all">
+              <h3 class="text-2xl md:text-3xl font-bold text-primary break-all group-hover:text-accent transition">
                 {{ contact.email.value }}
               </h3>
 
-              <p class="text-sm text-slate-500">
+              <p class="text-sm text-secondary">
                 Click to copy email
               </p>
             </div>
 
-            <!-- copied feedback -->
+            <!-- COPY FEEDBACK -->
             <Transition name="fade">
               <p v-if="copied" class="text-green-400 text-sm">
-                ✔ Email copied
+                ✔ {{ contact.email.copyText }}
               </p>
             </Transition>
 
-            <div class="border-t border-white/5"></div>
+            <div class="border-t border-border"></div>
 
-            <!-- LINKS -->
+            <!-- LINKS (DATA DRIVEN) -->
             <div class="grid sm:grid-cols-2 gap-4">
 
               <a
@@ -103,10 +118,10 @@ const copyEmail = () => {
                 :key="link.name"
                 :href="link.url"
                 target="_blank"
-                class="action-card"
+                class="card surface hover:border-accent flex justify-between items-center p-4 transition"
               >
-                <span>{{ link.name }}</span>
-                <span class="arrow">↗</span>
+                <span class="text-secondary">{{ link.name }}</span>
+                <span class="text-muted">↗</span>
               </a>
 
             </div>
@@ -120,73 +135,3 @@ const copyEmail = () => {
     </div>
   </section>
 </template>
-
-<style scoped>
-.panel {
-  padding: 2rem;
-  border-radius: 1.5rem;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(16px);
-  transition: all 0.3s ease;
-}
-
-.panel:hover {
-  border-color: rgba(168,85,247,0.35);
-  transform: translateY(-3px);
-}
-
-.panel-label {
-  font-size: 10px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #64748b;
-}
-
-.chip {
-  font-size: 11px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(168,85,247,0.12);
-  color: #c4b5fd;
-  border: 1px solid rgba(168,85,247,0.2);
-}
-
-.action-card {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 1rem;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.3s ease;
-  color: #cbd5e1;
-}
-
-.action-card:hover {
-  border-color: rgba(168,85,247,0.35);
-  background: rgba(168,85,247,0.05);
-  transform: translateY(-2px);
-}
-
-.arrow {
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.action-card:hover .arrow {
-  transform: translate(3px, -3px);
-  opacity: 1;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.25s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(6px);
-}
-</style>

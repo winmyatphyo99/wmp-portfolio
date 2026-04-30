@@ -1,4 +1,11 @@
 <script setup>
+import { defineAsyncComponent, ref, onMounted } from "vue";//With lazy import:
+
+//after creating a composable file for useLazySection
+import { useLazySection } from "@/composables/useLazySection";
+const { targetRef: projectsRef, isVisible: showProjects } = useLazySection();
+const { targetRef: resumeRef, isVisible: showResume } = useLazySection();
+
 /* composables */
 import { useScroll } from "@/composables/useScroll";
 import { useScrollSpy } from "@/composables/useScrollSpy";
@@ -7,13 +14,26 @@ import { useScrollSpy } from "@/composables/useScrollSpy";
 import AppHeader from "@/components/layout/AppHeader.vue";
 import AppFooter from "@/components/layout/AppFooter.vue";
 
-/* sections */
+/* sections (light = keep normal) */
 import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
-import ResumeSection from "@/components/sections/ResumeSection.vue";
-import ServicesSection from "@/components/sections/ServicesSection.vue";
-import ProjectsSection from "@/components/sections/ProjectsSection.vue";
-import ContactSection from "@/components/sections/ContactSection.vue";
+
+/*lazy-loaded (heavy) */
+const ResumeSection = defineAsyncComponent(() =>
+  import("@/components/sections/ResumeSection.vue")
+);
+
+const ServicesSection = defineAsyncComponent(() =>
+  import("@/components/sections/ServicesSection.vue")
+);
+
+const ProjectsSection = defineAsyncComponent(() =>
+  import("@/components/sections/ProjectsSection.vue")
+);
+
+const ContactSection = defineAsyncComponent(() =>
+  import("@/components/sections/ContactSection.vue")
+);
 
 /* data */
 import { hero } from "@/data/hero";
@@ -28,29 +48,44 @@ import { services } from "@/data/services";
 const { scrollTo } = useScroll();
 const { activeSection } = useScrollSpy(sections.map(s => s.id));
 
-/* handler */
 const handleNavigate = (id) => {
   scrollTo(id);
 };
-</script>
 
+</script>
 <template>
   <div class="bg-[#FDFDFD] text-slate-800 font-sans">
 
     <!-- HEADER -->
-    <AppHeader
-      :sections="sections"
-      :activeSection="activeSection"
-      @navigate="handleNavigate"
-    />
+    <AppHeader :sections="sections" :activeSection="activeSection" @navigate="handleNavigate" />
 
     <!-- MAIN -->
     <main>
       <HeroSection id="hero" :hero="hero" />
       <AboutSection id="about" :about="about" />
-      <ResumeSection id="resume" :resume="resume" />
+      <section id="resume" ref="resumeRef">
+
+  <ResumeSection
+    v-if="showResume"
+    :resume="resume"
+  />
+
+</section>
       <ServicesSection id="services" :services="services" />
-      <ProjectsSection id="projects" :projects="projects" />
+      <!-- For Lazy Load for projectionSection -->
+      <section id="projects" ref="projectsRef">
+        <Suspense>
+          <template #default>
+            <ProjectsSection v-if="showProjects" :projects="projects" />
+          </template>
+
+          <template #fallback>
+            <div class="py-24 text-center text-slate-400">
+              Loading projects...
+            </div>
+          </template>
+        </Suspense>
+      </section>
       <ContactSection id="contact" :contact="contact" />
     </main>
 

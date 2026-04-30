@@ -38,8 +38,8 @@
   /* ================= Layout ================= */
   --container-max: 1200px;
 
-  /* ================= BASE COLORS (NEW MIDNIGHT PALETTE) ================= */
-  --color-bg-primary: #05070A;
+  /* ================= BASE COLORS ================= */
+  --color-bg-primary: #020407;
   --color-bg-secondary: #0F1117;
   --color-surface: rgba(15, 17, 23, 0.6);
 
@@ -54,8 +54,7 @@
   --color-accent-purple: #A855F7;
   --color-accent-cyan: #06B6D4;
   --color-accent-blue: #3B82F6;
-  
-  /* Setting Default Accent */
+
   --color-accent: var(--color-accent-purple);
   --color-accent-soft: color-mix(in srgb, var(--color-accent) 20%, transparent);
 
@@ -65,13 +64,14 @@
 }
 
 /* =========================
-   SECTION ACCENTS & OVERRIDES
+   SECTION ACCENTS
 ========================= */
 #hero {
   --color-accent: var(--color-accent-purple);
 }
-#about { --color-accent: var(--color-accent-cyan); }
-
+#about {
+  --color-accent: var(--color-accent-cyan);
+}
 
 /* =========================
    BASE STYLES
@@ -116,39 +116,33 @@
   .text-primary { color: var(--color-text-primary); }
   .text-secondary { color: var(--color-text-secondary); }
   .text-muted { color: var(--color-text-muted); }
+
   .text-gradient {
     background: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .bg-grid {
-    mask-image: radial-gradient(circle at center, black, transparent 80%);
-    background-image: 
-      linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
   }
 
-  /* ----- Accent Tools ----- */
+  /* ----- Grid ----- */
+  .bg-grid {
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ----- Accent ----- */
   .text-accent { color: var(--color-accent); }
   .bg-accent { background-color: var(--color-accent); }
   .bg-accent-soft { background-color: var(--color-accent-soft); }
   .border-accent { border-color: var(--color-accent); }
-  
+
   /* ----- Layout ----- */
   .container-system {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--space-4);
-  }
-
-  /* ----- Custom Grid Pattern ----- */
-  .bg-grid {
-    background-image: 
-      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
   }
 
   /* ----- Animations ----- */
@@ -166,13 +160,92 @@
   }
 
   @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
+
+  /*=====================================================
+    Styles  For Contact Section
+  ===================================================== */
+
+  /* SURFACES */
+  .surface {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(16px);
+  }
+
+  .surface-strong {
+    background-color: rgba(15, 17, 23, 0.85);
+    border: 1px solid var(--color-border-strong);
+    backdrop-filter: blur(20px);
+  }
+
+  /* CARDS */
+  .card {
+    border-radius: var(--radius-xl);
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+  }
+
+  /* GLASS */
+  .glass {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+  }
+
+  /* GLOW */
+  .glow {
+    box-shadow: 0 0 30px var(--color-accent-soft);
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 40px var(--color-accent-soft);
+  }
+
+  /* STATUS */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+  }
+
+  .status-live {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+  }
+   /*=====================================================
+      Social List Styles For Footer
+  ===================================================== */
+  .list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  transition: all 0.25s ease;
+}
+
+.list-item:hover {
+  background: rgba(168,85,247,0.06);
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+  transform: translateX(3px);
+}
 }

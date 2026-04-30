@@ -1,7 +1,7 @@
 export const services = {
   header: {
     tag: "Technical Philosophy",
-    title: "Engineered for Scale & Stability.",
+    title: "Engineered for Stability",
     subtitle: "Prioritizing Clean Architecture and N-Tier separation to build enterprise software that grows with your business complexity."
   },
   items: [

@@ -22,7 +22,7 @@ defineProps({
               </span>
             </div>
 
-            <h2 class="text-4xl md:text-5xl font-bold text-primary leading-tight">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
               {{ about.header.title.split(' ').slice(0, -1).join(' ') }}
               <span class="text-accent">{{ about.header.title.split(' ').pop() }}</span>
             </h2>
