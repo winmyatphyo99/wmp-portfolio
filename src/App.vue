@@ -17,23 +17,18 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 /* sections (light = keep normal) */
 import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
+import SkillsSection from "@/components/sections/SkillsSection.vue";
 
 /*lazy-loaded (heavy) */
 // const ResumeSection = defineAsyncComponent(() =>
 //   import("@/components/sections/ResumeSection.vue")
 // );
 
-const ServicesSection = defineAsyncComponent(() =>
-  import("@/components/sections/ServicesSection.vue")
-);
-
 const ProjectsSection = defineAsyncComponent(() =>
   import("@/components/sections/ProjectsSection.vue")
 );
 
-const ContactSection = defineAsyncComponent(() =>
-  import("@/components/sections/ContactSection.vue")
-);
+
 
 /* data */
 import { hero } from "@/data/hero";
@@ -43,6 +38,7 @@ import { contact } from "@/data/contact";
 import { sections } from "@/data/sections";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { skills } from "@/data/skills";
 
 /* composables usage */
 const { scrollTo } = useScroll();
@@ -63,11 +59,12 @@ const handleNavigate = (id) => {
     <main>
       <HeroSection id="hero" :hero="hero" />
       <AboutSection id="about" :about="about" />
-      <section id="resume" ref="resumeRef">
+      <SkillsSection id="skills" :skills="skills" />
+      
 
   
 
-</section>
+
       <ServicesSection id="services" :services="services" />
       <!-- For Lazy Load for projectionSection -->
       <section id="projects" ref="projectsRef">
