@@ -15,7 +15,7 @@ export const contact = {
 
   email: {
     label: "Primary Contact Channel",
-    value: "winmyatphy05@gmail.com",
+    value: "winmyatphyo5@gmail.com",
     copyText: "COPIED",
     type: "direct-inquiry",
     priority: "high"

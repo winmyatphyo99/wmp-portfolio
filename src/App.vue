@@ -4,7 +4,7 @@ import { defineAsyncComponent, ref, onMounted } from "vue";//With lazy import:
 //after creating a composable file for useLazySection
 import { useLazySection } from "@/composables/useLazySection";
 const { targetRef: projectsRef, isVisible: showProjects } = useLazySection();
-const { targetRef: resumeRef, isVisible: showResume } = useLazySection();
+// const { targetRef: resumeRef, isVisible: showResume } = useLazySection();
 
 /* composables */
 import { useScroll } from "@/composables/useScroll";
@@ -19,9 +19,9 @@ import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
 
 /*lazy-loaded (heavy) */
-const ResumeSection = defineAsyncComponent(() =>
-  import("@/components/sections/ResumeSection.vue")
-);
+// const ResumeSection = defineAsyncComponent(() =>
+//   import("@/components/sections/ResumeSection.vue")
+// );
 
 const ServicesSection = defineAsyncComponent(() =>
   import("@/components/sections/ServicesSection.vue")
@@ -38,7 +38,7 @@ const ContactSection = defineAsyncComponent(() =>
 /* data */
 import { hero } from "@/data/hero";
 import { about } from "@/data/about";
-import { resume } from "@/data/resume";
+// import { resume } from "@/data/resume";
 import { contact } from "@/data/contact";
 import { sections } from "@/data/sections";
 import { projects } from "@/data/projects";
@@ -65,10 +65,7 @@ const handleNavigate = (id) => {
       <AboutSection id="about" :about="about" />
       <section id="resume" ref="resumeRef">
 
-  <ResumeSection
-    v-if="showResume"
-    :resume="resume"
-  />
+  
 
 </section>
       <ServicesSection id="services" :services="services" />
