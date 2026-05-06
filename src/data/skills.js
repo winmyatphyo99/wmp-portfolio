@@ -1,27 +1,40 @@
 export const skills = {
   backend: {
-    title: "Backend & Architecture",
+    title: "Backend & System Design",
     items: [
       "Laravel (PHP)",
+      "ASP.Net Core",
+      "RESTful API Development",
+      "MySQL Database Design & Optimization",
+      "Authentication & Authorization",
+      "Clean N-Tier Architecture principles",
       "SOLID Principles",
-      "RESTful API Design",
-      "MySQL Optimization",
-      "Docker",
-      "Git/GitHub",
+      "Docker (Basic Deployment)",
+      "Git & GitHub",
     ],
   },
 
   frontend: {
-    title: "Frontend Stack",
+    title: "Frontend Development",
     items: [
-      "HTML5",
-      "CSS3",
+      "Vue.js 3",
       "JavaScript (ES6+)",
-      "jQuery",
-      "Vue.js",
       "Tailwind CSS",
-      "Bootstrap",
-      "Figma",
+      "JQuery & Bootstrap",
+      "Responsive UI Design",
+      "Component-Based Architecture",
+      "HTML5 & CSS3",
+    ],
+  },
+
+  tools: {
+    title: "Tools & Workflow",
+    items: [
+      "Figma (UI Understanding)",
+      "Vite",
+      "npm / Composer",
+      "Postman (API Testing)",
+      "Git Workflow",
     ],
   },
 };

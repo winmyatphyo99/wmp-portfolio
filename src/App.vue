@@ -17,6 +17,7 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 /* sections (light = keep normal) */
 import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
+import ServicesSection from "@/components/sections/ServicesSection.vue";
 import SkillsSection from "@/components/sections/SkillsSection.vue";
 
 /*lazy-loaded (heavy) */
@@ -60,11 +61,6 @@ const handleNavigate = (id) => {
       <HeroSection id="hero" :hero="hero" />
       <AboutSection id="about" :about="about" />
       <SkillsSection id="skills" :skills="skills" />
-      
-
-  
-
-
       <ServicesSection id="services" :services="services" />
       <!-- For Lazy Load for projectionSection -->
       <section id="projects" ref="projectsRef">
