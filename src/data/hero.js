@@ -42,7 +42,7 @@ export const hero = {
   profile: {
     name: "Win Myat Phyo",
     role: "Full Stack Engineer",
-    // image: "/assets/wmp.jpg"
+    image: "/assets/wmp.jpg",
     location: {
     city: "Yangon",
     country: "Myanmar",

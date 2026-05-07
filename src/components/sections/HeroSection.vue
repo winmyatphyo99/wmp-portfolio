@@ -119,7 +119,7 @@ onMounted(() => {
               <div class="w-3 h-3 rounded-full bg-green-500/40"></div>
             </div>
 
-            <div class="w-full h-80 rounded-2xl overflow-hidden mb-8 bg-slate-900 border border-white/5">
+            <div class="w-full h-120 rounded-2xl overflow-hidden mb-8 bg-slate-900 border border-white/5">
               <img :src="hero.profile.image" class="w-full h-full object-cover transition-all"
                 @error="(e) => e.target.src = 'https://ui-avatars.com/api/?name=Win+Myat+Phyo&background=a855f7&color=fff'" />
             </div>
