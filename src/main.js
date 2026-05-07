@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
 import './style.css'
-createApp(App).use(router).mount('#app')
+// SPA page component for SEO
+import { createHead } from '@vueuse/head'
+const app = createApp(App)
+
+app.use(createHead())
+app.mount('#app')

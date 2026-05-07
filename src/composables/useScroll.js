@@ -3,10 +3,15 @@ export function useScroll() {
     const el = document.getElementById(id);
     if (!el) return;
 
+      // smooth scroll
     el.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+
+     // update URL hash
+    history.pushState(null, '', `#${id}`);
+
 
     // accessibility
     el.setAttribute("tabindex", "-1");
