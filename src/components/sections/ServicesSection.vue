@@ -33,7 +33,7 @@ const closeDetails = () => {
 
       <!-- HEADER -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-24">
-        <div class="max-w-2xl">
+        <div class="w-full">
           <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
             <span class="flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-cyan-400 opacity-75"></span>
@@ -73,7 +73,7 @@ const closeDetails = () => {
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
 
           <div class="relative z-10">
-            <div class="flex justify-between items-center mb-12">
+            <div class="flex justify-start items-center mb-12">
               <div class="p-3 rounded-2xl bg-white/5 border border-white/10 group-hover:border-cyan-500/50 transition-colors">
                 <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
