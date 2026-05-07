@@ -76,14 +76,15 @@ onMounted(() => {
           </div>
 
           <div class="space-y-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
               {{ hero.title.line1 }}<br />
               <span class="text-gradient">{{ hero.title.highlight }}</span>
             </h2>
 
-            <p class="text-lg text-slate-300 max-w-lg font-medium leading-relaxed">
+            <p class="text-base md:text-lg text-gray-400 font-light max-w-md leading-relaxed">
               {{ hero.description.text }}
             </p>
+            
           </div>
 
           <div class="flex items-center gap-6">
@@ -119,7 +120,7 @@ onMounted(() => {
                 @error="(e) => e.target.src = 'https://ui-avatars.com/api/?name=Win+Myat+Phyo&background=a855f7&color=fff'" />
             </div>
 
-            <div class="space-y-5 font-mono text-[11px] tracking-wider">
+            <div class="space-y-5 text-[12px] tracking-wider">
               <div class="flex justify-between border-b border-white/5 pb-3">
                 <span class="text-slate-500">NAME</span>
                 <span class="text-purple-400 font-bold uppercase">{{ hero.profile.name }}</span>

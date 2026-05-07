@@ -1,28 +1,40 @@
 export const about = {
   header: {
-    label: "About Me",
-    title: "Engineering systems with clarity & resilience",
-    highlight: "clarity & resilience"
+    label: "PROFILE",
+    title: "Strong systems built with",
+    highlight: "clarity"
   },
 
   intro: {
-  tag: "Professional Journey",
-  title: "Building scalable and maintainable backend systems",
-  description:
-    "With a Computer Science background and hands-on experience in Laravel and ASP.Net Core, I build RESTful APIs, implement queue-based background processing, and design modular N-tier architectures. I focus on writing clean, testable, and maintainable code for production systems."
+    tag: "Professional Journey",
+    // Higher-level summary for the main intro
+    shortDescription: "I specialize in architecting robust backends using modern design patterns to solve complex business logic with precision and performance.",
+    title: "I design backend systems that scale reliably in real-world production environments",
+    // Specific technical details for the "Journey" card
+    detailedDescription: "With a Computer Science background and hands-on experience in Laravel and ASP.NET Core, I build RESTful APIs and implement queue-based processing. I focus on writing clean, testable code using Service-Repository and N-tier architectures."
+  },
+
+ cta: {
+  primary: {
+    label: "View Projects",
+    target: "projects"
+  },
+  secondary: {
+    label: "Contact Me",
+    target: "contact"
+  }
 },
 
   metrics: [
     {
       value: "2+",
-      label: "Years Experience",
-      style: "light"
+      label: "Years Experience"
     },
     {
       value: "Laravel",
-      label: "Core Backend Stack",
-      style: "dark"
-    }
+      label: "Specialization"
+    },
+   
   ],
 
   profile: [

@@ -45,37 +45,31 @@ const copyEmail = () => {
       <div class="grid lg:grid-cols-12 gap-12 items-start">
 
         <!-- LEFT -->
-        <div class="lg:col-span-5 space-y-10 relative">
-
-          <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-purple-500/30 via-transparent to-transparent"></div>
-
-          <!-- CAPABILITIES (DATA DRIVEN) -->
-          <div class="pl-6 space-y-4">
-
-            <p class="text-xs uppercase tracking-widest text-muted">
-              Capabilities
-            </p>
-
+        <div class="lg:col-span-5 space-y-12">
+          <div class="space-y-6">
+            <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">Available Expertise</h4>
             <div class="flex flex-wrap gap-2">
               <span
                 v-for="cap in contact.capabilities"
                 :key="cap.name"
-                class="chip"
+                class="px-4 py-2 text-xs font-bold rounded-xl bg-white/5 border border-white/10 text-gray-300"
               >
                 {{ cap.name }}
               </span>
             </div>
-
           </div>
 
-          <!-- STATUS (DATA DRIVEN) -->
-          <div class="pl-6 status-live">
-            <span class="status-dot"></span>
-            <span>
-              {{ contact.status.value }} • {{ contact.status.year }}
-            </span>
+          <div class="p-6 rounded-3xl bg-white/[0.02] border border-white/5 flex items-center gap-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full border border-cyan-500/30 flex items-center justify-center">
+              <div class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+            </div>
+            <div>
+              <p class="text-[10px] font-black uppercase tracking-widest text-white/30">Current Status</p>
+              <p class="text-sm font-bold text-white italic">
+                {{ contact.status.value }} — {{ contact.status.year }}
+              </p>
+            </div>
           </div>
-
         </div>
 
         <!-- RIGHT -->

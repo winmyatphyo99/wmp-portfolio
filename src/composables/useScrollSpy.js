@@ -1,21 +1,37 @@
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
 
-export function useScrollSpy(ids = []) {
+export function useScrollSpy({ ids = [], offset = 0, debug = false } = {}) {
   const activeSection = ref(null);
-  let observer;
+  let observer = null;
 
-  onMounted(() => {
+  const initObserver = () => {
+    if (observer) observer.disconnect();
+
     observer = new IntersectionObserver(
       (entries) => {
+        let maxRatio = 0;
+        let current = activeSection.value;
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            activeSection.value = entry.target.id;
+            if (entry.intersectionRatio > maxRatio) {
+              maxRatio = entry.intersectionRatio;
+              current = entry.target.id;
+            }
           }
         });
+
+        if (current !== activeSection.value) {
+          activeSection.value = current;
+
+          if (debug) {
+            console.log("Active section:", current);
+          }
+        }
       },
       {
-        rootMargin: "-40% 0px -50% 0px",
-        threshold: 0.1,
+        rootMargin: `-${offset}px 0px -40% 0px`,
+        threshold: [0.1, 0.25, 0.5, 0.75],
       }
     );
 
@@ -23,6 +39,11 @@ export function useScrollSpy(ids = []) {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+  };
+
+  onMounted(async () => {
+    await nextTick();
+    initObserver();
   });
 
   onUnmounted(() => observer?.disconnect());

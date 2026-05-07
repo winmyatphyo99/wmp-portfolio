@@ -19,6 +19,7 @@ import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
 import ServicesSection from "@/components/sections/ServicesSection.vue";
 import SkillsSection from "@/components/sections/SkillsSection.vue";
+import ContactSection from "@/components/sections/ContactSection.vue";
 
 /*lazy-loaded (heavy) */
 // const ResumeSection = defineAsyncComponent(() =>
@@ -35,20 +36,30 @@ const ProjectsSection = defineAsyncComponent(() =>
 import { hero } from "@/data/hero";
 import { about } from "@/data/about";
 // import { resume } from "@/data/resume";
+import { skills } from "@/data/skills";
 import { contact } from "@/data/contact";
 import { sections } from "@/data/sections";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
-import { skills } from "@/data/skills";
+
 
 /* composables usage */
 const { scrollTo } = useScroll();
-const { activeSection } = useScrollSpy(sections.map(s => s.id));
+
+const getHeaderOffset = () => {
+  const header = document.querySelector("header");
+  return header ? header.offsetHeight : 80; // fallback
+};
+
+const { activeSection } = useScrollSpy({
+  ids: sections.map((s) => s.id),
+  offset: getHeaderOffset(),
+  debug: true, // remove in production
+});
 
 const handleNavigate = (id) => {
   scrollTo(id);
 };
-
 </script>
 <template>
   <div class="bg-[#FDFDFD] text-slate-800 font-sans">

@@ -18,8 +18,8 @@ import { footerData } from '../../data/footer';
           {{ footerData.brand.tagline }}
         </h2> -->
 
-        <p class="text-secondary text-sm md:text-base leading-relaxed max-w-xl">
-          {{ footerData.brand.description }}
+        <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed italic">
+          "{{ footerData.brand.description }}"
         </p>
 
         <div class="w-24 h-px bg-border opacity-60"></div>
