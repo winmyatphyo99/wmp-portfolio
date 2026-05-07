@@ -40,12 +40,6 @@ const scrollTo = (id) => {
               </span>
             </div>
 
-            <!-- <h2 class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.95]">
-              {{ about.header.title }}
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-                {{ about.header.highlight }}
-              </span>
-            </h2> -->
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
               {{ about.header.title }}<br />
               <span class="text-gradient">{{ about.header.highlight }}</span>

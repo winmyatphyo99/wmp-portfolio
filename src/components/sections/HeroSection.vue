@@ -5,8 +5,14 @@ const props = defineProps({
   hero: Object
 });
 
+// Define the scrollTo function
 const scrollTo = (id) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    console.warn(`Scroll target #${id} not found.`);
+  }
 };
 
 /* =========================
@@ -51,8 +57,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="relative py-32 overflow-hidden"
-    style="background-color: #05070A !important;">
+  <section id="hero" class="relative py-32 overflow-hidden" style="background-color: #05070A !important;">
 
     <div class="absolute inset-0 bg-grid opacity-30"></div>
 
@@ -81,10 +86,9 @@ onMounted(() => {
               <span class="text-gradient">{{ hero.title.highlight }}</span>
             </h2>
 
-            <p class="text-base md:text-lg text-gray-400 font-light max-w-md leading-relaxed">
+            <p class="text-base md:text-lg text-gray-400 font-normal max-w-lg leading-relaxed">
               {{ hero.description.text }}
             </p>
-            
           </div>
 
           <div class="flex items-center gap-6">
@@ -131,7 +135,7 @@ onMounted(() => {
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-500">LOCATION</span>
-                <span class="text-slate-400">Yangon | Myanmar</span>
+                <span class="text-slate-400">{{ hero.profile.location.display }}</span>
               </div>
             </div>
           </div>

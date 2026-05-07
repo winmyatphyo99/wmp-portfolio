@@ -20,7 +20,7 @@ export const hero = {
     
     primary: {
       label: "View Experience",
-      target: "resume"
+      target: "services"
     },
    socials: [
   {
@@ -43,5 +43,15 @@ export const hero = {
     name: "Win Myat Phyo",
     role: "Full Stack Engineer",
     // image: "/assets/wmp.jpg"
+    location: {
+    city: "Yangon",
+    country: "Myanmar",
+    region: "Southeast Asia",
+    display: "Yangon | Myanmar"
+  },
+  contact: {
+    email: "winmyatphyo5@gmail.com",
+    availability: "Open to opportunities"
+  },
   }
 };

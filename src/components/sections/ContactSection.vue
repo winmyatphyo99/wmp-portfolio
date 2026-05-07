@@ -30,7 +30,7 @@ const copyEmail = () => {
           {{ contact.header.status }}
         </p>
 
-        <h2 class="text-4xl md:text-5xl font-extrabold text-primary leading-[1.2]">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
           Let’s build something
           <span class="text-gradient">{{ contact.header.highlight }}</span>
         </h2>
@@ -86,7 +86,7 @@ const copyEmail = () => {
                 {{ contact.email.label }}
               </p>
 
-              <h3 class="text-2xl md:text-3xl font-bold text-primary break-all group-hover:text-accent transition">
+              <h3 class="text-sm md:text-base font-medium text-primary break-all group-hover:text-accent transition">
                 {{ contact.email.value }}
               </h3>
 
