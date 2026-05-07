@@ -5,7 +5,7 @@ import { defineAsyncComponent, onMounted } from "vue";
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Wint Myat Phyo | Backend Developer",
+  title: "Wint Myat Phyo | Full Stack Developer",
   meta: [
     {
       name: "description",

@@ -1,7 +1,14 @@
+import tmsImg from "@/assets/projects/tms.png";
+import tmsWebp from "@/assets/projects/tms.webp";
+
+import foodImg from "@/assets/projects/food-order.png";
+import foodWebp from "@/assets/projects/food-order.webp";
+
 export const projects = [
   {
     title: "Training Management System (TMS)",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+    image: tmsImg,
+    imageWebp: tmsWebp,
     tags: ["Laravel", "Tailwind CSS", "N-Tier"],
     overview: "An enterprise solution for course distribution and holiday management within corporate structures.",
     features: [
@@ -13,7 +20,8 @@ export const projects = [
   },
   {
     title: "Food Order Management System",
-    image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c02?auto=format&fit=crop&q=80&w=1200",
+    image: foodImg,
+    imageWebp: foodWebp,
     tags: ["Pure PHP MVC", "MySQL", "Invoicing"],
     overview: "High-performance restaurant processing and accounting system designed for local business stability.",
     features: [

@@ -3,17 +3,23 @@ export function useScroll() {
     const el = document.getElementById(id);
     if (!el) return;
 
-      // smooth scroll
-    el.scrollIntoView({
+    const header = document.querySelector("header");
+    const offset = header?.offsetHeight ?? 80;
+
+    const top =
+      el.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset;
+
+    window.scrollTo({
+      top,
       behavior: "smooth",
-      block: "start",
     });
 
-     // update URL hash
-    history.pushState(null, '', `#${id}`);
+    // update URL hash
+    history.pushState(null, "", `#${id}`);
 
-
-    // accessibility
+    // accessibility focus (safe)
     el.setAttribute("tabindex", "-1");
     el.focus({ preventScroll: true });
   };

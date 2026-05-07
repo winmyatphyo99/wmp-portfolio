@@ -57,7 +57,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="relative py-32 overflow-hidden" style="background-color: #05070A !important;">
+  <section
+  id="hero"
+  v-motion
+  :initial="{ opacity: 0, y: 60 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 700 } }"
+  class="relative py-32 overflow-hidden"
+  style="background-color: #05070A !important;"
+>
 
     <div class="absolute inset-0 bg-grid opacity-30"></div>
 

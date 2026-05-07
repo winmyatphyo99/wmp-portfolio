@@ -41,7 +41,7 @@ export const hero = {
 
   profile: {
     name: "Win Myat Phyo",
-    role: "Full Stack Engineer",
+    role: "Full Stack Developer",
     image: "/assets/wmp.jpg",
     location: {
     city: "Yangon",
