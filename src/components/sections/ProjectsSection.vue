@@ -58,7 +58,7 @@ watch(selectedProject, (val) => {
 </script>
 
 <template>
-  <section id="projects" class="relative py-32 bg-[#050505] border-t border-white/5 overflow-hidden">
+  <section id="projects" class="relative pt-28 pb-20 bg-[#050505] border-t border-white/5 overflow-hidden">
 
     <!-- Flash Design Background Elements -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(168,85,247,0.03),transparent_70%)]"></div>
@@ -80,7 +80,7 @@ watch(selectedProject, (val) => {
                 Portfolio
               </span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+            <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
               Production <span class="text-gradient">Systems</span>
             </h2>
           </div>

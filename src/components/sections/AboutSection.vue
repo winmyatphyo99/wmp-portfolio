@@ -15,7 +15,7 @@ const scrollTo = (id) => {
 </script>
 
 <template>
-  <section class="relative py-28 overflow-hidden bg-[#050505] border-y border-white/5">
+  <section class="relative pt-28 pb-20 overflow-hidden bg-[#050505] border-y border-white/5">
     <!-- Flash Design Background Elements -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(168,85,247,0.05),transparent_70%)]"></div>
     <div
@@ -40,7 +40,7 @@ const scrollTo = (id) => {
               </span>
             </div>
 
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
+            <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
               {{ about.header.title }}<br />
               <span class="text-gradient">{{ about.header.highlight }}</span>
             </h2>

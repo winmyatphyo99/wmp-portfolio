@@ -16,7 +16,7 @@ const copyEmail = () => {
   <section
     v-if="contact"
     id="contact"
-    class="relative py-32 bg-primary overflow-hidden"
+    class="relative pt-28 pb-20 bg-primary overflow-hidden"
   >
     <!-- background glow -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(168,85,247,0.12),transparent_50%)]"></div>
@@ -30,7 +30,7 @@ const copyEmail = () => {
           {{ contact.header.status }}
         </p>
 
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
+        <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
           Let’s build something
           <span class="text-gradient">{{ contact.header.highlight }}</span>
         </h2>

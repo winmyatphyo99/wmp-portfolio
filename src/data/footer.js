@@ -28,8 +28,8 @@ export const footerData = {
 
   system: {
     items: [
-      { label: "Location", value: "Handcrafted in Yangon", icon: "📍" },
-      { label: "Stack", value: "Laravel / Vue / ASP.NET", icon: "🧠" },
+      { label: "Location", value: "Yangon", icon: "📍" },
+      { label: "Stack", value: "Laravel / ASP.NET", icon: "🧠" },
       { label: "Response", value: "24h", icon: "⚡" }
     ]
   },

@@ -62,7 +62,7 @@ onMounted(() => {
   v-motion
   :initial="{ opacity: 0, y: 60 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-  class="relative py-32 overflow-hidden"
+  class="relative pt-25 pb-20 overflow-hidden"
   style="background-color: #05070A !important;"
 >
 
@@ -88,7 +88,7 @@ onMounted(() => {
           </div>
 
           <div class="space-y-6">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight">
+            <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
               {{ hero.title.line1 }}<br />
               <span class="text-gradient">{{ hero.title.highlight }}</span>
             </h2>
@@ -126,7 +126,7 @@ onMounted(() => {
               <div class="w-3 h-3 rounded-full bg-green-500/40"></div>
             </div>
 
-            <div class="w-full h-120 rounded-2xl overflow-hidden mb-8 bg-slate-900 border border-white/5">
+            <div class="w-full h-95 rounded-2xl overflow-hidden mb-8 bg-slate-900 border border-white/5">
               <img :src="hero.profile.image" class="w-full h-full object-cover transition-all"
                 @error="(e) => e.target.src = 'https://ui-avatars.com/api/?name=Win+Myat+Phyo&background=a855f7&color=fff'" />
             </div>

@@ -16,7 +16,7 @@ const setTab = (tab) => {
 </script>
 
 <template>
-  <section id="skills" class="relative py-32 bg-[#050505] border-y border-white/5 overflow-hidden">
+  <section id="skills" class="relative pt-28 pb-20 bg-[#050505] border-y border-white/5 overflow-hidden">
 
     <!-- Flash Design Background Elements -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(168,85,247,0.03),transparent_70%)]"></div>
@@ -40,7 +40,7 @@ const setTab = (tab) => {
           </span>
         </div>
 
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight mb-6">
+        <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
           Tools Behind the <span class="text-gradient">Systems</span>
         </h2>
 

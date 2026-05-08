@@ -22,7 +22,7 @@ const closeDetails = () => {
 </script>
 
 <template>
-  <section id="services" class="relative py-32 bg-[#050505] border-y border-white/5 overflow-hidden">
+  <section id="services" class="relative pt-28 pb-20 bg-[#050505] border-y border-white/5 overflow-hidden">
     
     <!-- Flash Design Background Elements -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,_rgba(6,182,212,0.05),transparent_70%)]"></div>
@@ -44,7 +44,7 @@ const closeDetails = () => {
             </span>
           </div>
 
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight mb-6">
+          <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight tracking-tight">
             {{ services.header.title.split(' ').slice(0, -1).join(' ') }}
             <span class="text-gradient">{{ services.header.title.split(' ').pop() }}</span>
           </h2>

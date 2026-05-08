@@ -4,6 +4,7 @@
    DESIGN TOKENS (THEME SYSTEM)
 ========================= */
 @theme {
+
   /* ================= Fonts ================= */
   --font-sans: 'Inter', 'Roboto', sans-serif;
   --font-heading: 'Plus Jakarta Sans', 'Poppins', sans-serif;
@@ -35,8 +36,8 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
 
-  /* ================= Layout ================= */
-  --container-max: 1200px;
+  /* ================= CHANGED: container width ================= */
+  --container-max: 1100px;
 
   /* ================= BASE COLORS ================= */
   --color-bg-primary: #020407;
@@ -69,6 +70,7 @@
 #hero {
   --color-accent: var(--color-accent-purple);
 }
+
 #about {
   --color-accent: var(--color-accent-cyan);
 }
@@ -77,6 +79,7 @@
    BASE STYLES
 ========================= */
 @layer base {
+
   html {
     font-family: var(--font-sans);
     font-size: 16px;
@@ -88,9 +91,12 @@
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* CHANGED: prevents horizontal stretch */
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -103,19 +109,35 @@
 }
 
 /* =========================
-   UTILITIES (THEME BRIDGE)
+   UTILITIES
 ========================= */
 @layer utilities {
 
   /* ----- Backgrounds ----- */
-  .bg-primary { background-color: var(--color-bg-primary); }
-  .bg-secondary { background-color: var(--color-bg-secondary); }
-  .bg-surface { background-color: var(--color-surface); }
+  .bg-primary {
+    background-color: var(--color-bg-primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
 
   /* ----- Text ----- */
-  .text-primary { color: var(--color-text-primary); }
-  .text-secondary { color: var(--color-text-secondary); }
-  .text-muted { color: var(--color-text-muted); }
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .text-muted {
+    color: var(--color-text-muted);
+  }
 
   .text-gradient {
     background: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
@@ -133,26 +155,49 @@
   }
 
   /* ----- Accent ----- */
-  .text-accent { color: var(--color-accent); }
-  .bg-accent { background-color: var(--color-accent); }
-  .bg-accent-soft { background-color: var(--color-accent-soft); }
-  .border-accent { border-color: var(--color-accent); }
+  .text-accent {
+    color: var(--color-accent);
+  }
 
-  /* ----- Layout ----- */
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .bg-accent-soft {
+    background-color: var(--color-accent-soft);
+  }
+
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  /* =========================
+     CHANGED: CONTAINER SYSTEM
+  ========================= */
+
   .container-system {
+    width: 100%;
     max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 var(--space-4);
+    margin-inline: auto;
+
+    /* OLD: padding: 0 var(--space-4) */
+    padding-inline: clamp(1rem, 3vw, 2rem);
   }
 
   /* ----- Animations ----- */
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .fade-up {
@@ -160,15 +205,19 @@
   }
 
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  /*=====================================================
-    Styles  For Contact Section
-  ===================================================== */
-
   /* SURFACES */
+
   .surface {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -182,6 +231,7 @@
   }
 
   /* CARDS */
+
   .card {
     border-radius: var(--radius-xl);
     background: rgba(255,255,255,0.02);
@@ -196,6 +246,7 @@
   }
 
   /* GLASS */
+
   .glass {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.06);
@@ -203,6 +254,7 @@
   }
 
   /* GLOW */
+
   .glow {
     box-shadow: 0 0 30px var(--color-accent-soft);
   }
@@ -212,6 +264,7 @@
   }
 
   /* STATUS */
+
   .status-dot {
     width: 8px;
     height: 8px;

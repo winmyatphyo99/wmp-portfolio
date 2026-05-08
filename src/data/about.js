@@ -7,10 +7,9 @@ export const about = {
 
   intro: {
     tag: "Professional Journey",
-    // Higher-level summary for the main intro
     shortDescription: "I specialize in architecting robust backends using modern design patterns to solve complex business logic with precision and performance.",
     title: "I design backend systems that scale reliably in real-world production environments",
-    // Specific technical details for the "Journey" card
+
     detailedDescription: "With a Computer Science background and hands-on experience in Laravel and ASP.NET Core, I build RESTful APIs and implement queue-based processing. I focus on writing clean, testable code using Service-Repository and N-tier architectures."
   },
 
