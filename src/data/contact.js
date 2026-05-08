@@ -1,47 +1,31 @@
-// src/data/contact.js
-
 export const contact = {
   header: {
     status: "Open for Collaboration",
-    title: "Let’s build excellence.",
-    highlight: "excellence",
-    tone: "professional-saas"
+    title: "Let’s build something great",
+    highlight: "together"
   },
 
   intro: {
     subtitle:
-      "Currently seeking senior-level challenges. Based in Yangon, working worldwide."
+      "Open to full stack web developer roles and impactful engineering projects. Based in Yangon, working globally."
   },
 
   email: {
-    label: "Primary Contact Channel",
+    label: "Contact Email",
     value: "winmyatphyo5@gmail.com",
-    copyText: "COPIED",
-    type: "direct-inquiry",
+    copyText: "Copied",
     priority: "high"
   },
 
   capabilities: [
-    {
-      name: "Laravel Architecture",
-      category: "backend"
-    },
-    {
-      name: "API Design",
-      category: "system"
-    },
-    {
-      name: "Queue Systems",
-      category: "performance"
-    },
-    {
-      name: "Database Optimization",
-      category: "data"
-    }
+    { name: "Laravel Architecture", category: "backend" },
+    { name: "API Design", category: "backend" },
+    { name: "Queue Systems", category: "performance" },
+    { name: "Database Optimization", category: "data" }
   ],
 
   status: {
-    label: "Availability Status",
+    label: "Availability",
     value: "Available for selected projects",
     state: "active",
     year: 2026
@@ -51,14 +35,12 @@ export const contact = {
     {
       name: "LinkedIn",
       url: "https://linkedin.com/in/wint-myat-phyo",
-      style: "primary",
       type: "social",
       icon: "linkedin"
     },
     {
       name: "GitHub",
       url: "https://github.com/winmyatphyo99",
-      style: "secondary",
       type: "code",
       icon: "github"
     }

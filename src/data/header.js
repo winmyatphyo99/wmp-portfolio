@@ -2,7 +2,7 @@ export const headerData = {
   brand: {
     initials: "WP",
     name: "Win Myat Phyo",
-    role: "Full Stack Engineer",
+    role: "Full Stack Developer",
   },
 
   contact: {

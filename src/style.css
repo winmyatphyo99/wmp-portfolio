@@ -37,19 +37,20 @@
   --radius-xl: 1.5rem;
 
   /* ================= CHANGED: container width ================= */
+
   --container-max: 1100px;
 
   /* ================= BASE COLORS ================= */
-  --color-bg-primary: #020407;
-  --color-bg-secondary: #0F1117;
-  --color-surface: rgba(15, 17, 23, 0.6);
+ --color-bg-primary: #ffffff;
+--color-bg-secondary: #f8fafc;
+--color-surface: rgba(255, 255, 255, 0.7);
 
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-strong: rgba(255, 255, 255, 0.15);
+--color-border: rgba(0, 0, 0, 0.08);
+--color-border-strong: rgba(0, 0, 0, 0.15);
 
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #64748B;
+--color-text-primary: #0f172a;
+--color-text-secondary: #334155;
+--color-text-muted: #64748b;
 
   /* ================= ACCENT SYSTEM ================= */
   --color-accent-purple: #A855F7;
@@ -301,4 +302,28 @@
   color: var(--color-text-primary);
   transform: translateX(3px);
 }
+}
+html.dark {
+  /* BG */
+  --color-bg-primary: #020407;
+  --color-bg-secondary: #0F1117;
+  --color-surface: rgba(15, 17, 23, 0.6);
+
+  /* BORDER */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  /* TEXT */
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #64748B;
+}
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
 }

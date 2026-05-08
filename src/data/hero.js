@@ -22,19 +22,18 @@ export const hero = {
       label: "View Experience",
       target: "services"
     },
-   socials: [
+  socials: [
   {
     name: "LinkedIn",
     url: "https://linkedin.com/in/wint-myat-phyo",
     icon: LinkedInIcon,
-     color: "#0A66C2" // LinkedIn official
+    class: "text-[#0A66C2] hover:text-[#0A66C2]"
   },
   {
     name: "GitHub",
     url: "https://github.com/winmyatphyo99",
     icon: GitHubIcon,
-    color: "#ffffff", // default (visible)
-    hoverColor: "#181717"// GitHub official
+    class: "text-white hover:text-gray-300"
   }
 ]
   },

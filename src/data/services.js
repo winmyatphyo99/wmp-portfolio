@@ -1,94 +1,95 @@
 export const services = {
   header: {
     tag: "Engineering Focus",
-    title: "Building Scalable & Maintainable Systems",
+    title: "Building scalable",
+    stitle: "maintainable systems",
     subtitle:
-      "I design and develop backend-focused applications with clean architecture, modular structure, and performance-first thinking.",
+      "Backend-focused development with clean architecture, modular design, and performance-first principles."
   },
 
   items: [
     {
-      title: "Backend Architecture & API Development",
-      desc: "Designing and building scalable backend systems with clean architecture, secure authentication, and well-structured APIs.",
+      title: "Backend Architecture & APIs",
+      desc: "Building scalable backend systems with secure, well-structured REST APIs.",
       patterns: [
         "Clean Architecture",
-        "REST API Design",
-        "Authentication & Authorization",
-        "Modular Service Layer",
+        "REST APIs",
+        "Auth & Authorization",
+        "Service Layer"
       ],
       stack: ["Laravel", "PHP 8+", "MySQL", "Redis"],
       outcome:
-        "Maintainable backend systems that are easy to extend and integrate with frontend or mobile apps.",
+        "Maintainable backend systems ready for scaling and integration."
     },
 
     {
-      title: "Full-Stack Web Applications",
-      desc: "Developing complete web applications by combining Laravel backend with modern Vue.js frontend interfaces.",
+      title: "Full-Stack Applications",
+      desc: "Developing web apps using Laravel and Vue.js with clean frontend-backend integration.",
       patterns: [
-        "Component-Based UI",
+        "Component UI",
         "API Integration",
-        "Role-Based Systems",
-        "CRUD Architecture",
+        "Role Systems",
+        "CRUD Systems"
       ],
       stack: ["Laravel", "Vue.js 3", "Tailwind CSS"],
       outcome:
-        "End-to-end web applications with smooth user experience and structured backend logic.",
+        "Complete web applications with structured backend and smooth UI."
     },
 
     {
-      title: "Database Design & Optimization",
-      desc: "Designing relational database structures with proper relationships and optimized queries for performance.",
+      title: "Database Design",
+      desc: "Designing optimized relational databases with efficient query structures.",
       patterns: [
-        "Database Normalization",
-        "Relationship Modeling",
-        "Indexing Strategy",
-        "Query Optimization",
+        "Normalization",
+        "Data Modeling",
+        "Indexing",
+        "Query Optimization"
       ],
       stack: ["MySQL", "Eloquent ORM"],
       outcome:
-        "Efficient database structures that support scalable and fast-performing applications.",
+        "Fast and efficient database structures for scalable systems."
     },
 
     {
-      title: "System Design & Architecture Principles",
-      desc: "Applying clean architecture principles to build maintainable and scalable software systems.",
+      title: "System Architecture",
+      desc: "Applying clean architecture principles for scalable software design.",
       patterns: [
-        "Service Layer Pattern",
+        "Service Pattern",
         "Separation of Concerns",
         "Dependency Management",
-        "Modular Design",
+        "Modular Design"
       ],
-      stack: ["Laravel Architecture", "OOP PHP", "Design Principles"],
+      stack: ["Laravel", "OOP PHP", "Design Principles"],
       outcome:
-        "Well-structured systems that are easier to maintain, test, and extend over time.",
+        "Well-structured systems that are easy to maintain and extend."
     },
 
     {
-      title: "Performance & Code Optimization",
-      desc: "Improving application performance through debugging, refactoring, and system-level optimizations.",
+      title: "Performance Optimization",
+      desc: "Improving application speed through refactoring, caching, and query optimization.",
       patterns: [
-        "Code Refactoring",
+        "Refactoring",
         "Query Optimization",
-        "Caching Strategy",
-        "Performance Tuning",
+        "Caching",
+        "Performance Tuning"
       ],
       stack: ["PHP", "MySQL", "Redis"],
       outcome:
-        "Faster and more stable applications with improved response time and reliability.",
+        "Faster and more stable application performance."
     },
 
     {
-      title: "Development Workflow & Deployment",
-      desc: "Managing development workflows, version control, and deployment processes for production-ready applications.",
+      title: "Deployment & Workflow",
+      desc: "Managing CI/CD, version control, and deployment automation.",
       patterns: [
-        "CI/CD pipeline With Git Hub Actions",
+        "CI/CD (GitHub Actions)",
         "Version Control",
-        "Containerization",
-        "Deployment Automation",
+        "Dockerization",
+        "Deployment"
       ],
       stack: ["Git", "GitHub Actions", "Docker", "DigitalOcean"],
       outcome:
-        "Smooth deployment process with reduced manual errors and consistent releases.",
-    },
-  ],
+        "Reliable and automated deployment workflow."
+    }
+  ]
 };
