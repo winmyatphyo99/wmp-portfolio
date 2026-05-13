@@ -34,7 +34,7 @@ const copyEmail = () => {
         </p>
 
         <h2
-          class="max-w-2xl mx-auto text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight tracking-tight"
+          class="max-w-2xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-primary leading-tight tracking-tight"
         >
           Let’s build something
           <span class="text-gradient">

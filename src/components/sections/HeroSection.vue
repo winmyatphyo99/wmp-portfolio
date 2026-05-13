@@ -109,7 +109,7 @@ onMounted(() => {
             </button>
 
             <!-- SOCIALS -->
-            <div class="flex gap-3">
+           <div class="flex gap-3">
               <a v-for="social in hero.cta.socials" :key="social.name" :href="social.url" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-xl
     bg-surface border border-border hover:border-purple-500 transition-all group">
                 <component :is="social.icon" class="w-5 h-5 transition-all" :class="social.class" />

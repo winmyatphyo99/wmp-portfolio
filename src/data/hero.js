@@ -22,20 +22,22 @@ export const hero = {
       label: "View Experience",
       target: "services"
     },
-  socials: [
-  {
-    name: "LinkedIn",
-    url: "https://linkedin.com/in/wint-myat-phyo",
-    icon: LinkedInIcon,
-    class: "text-[#0A66C2] hover:text-[#0A66C2]"
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/winmyatphyo99",
-    icon: GitHubIcon,
-    class: "text-white hover:text-gray-300"
-  }
-]
+      socials: [
+      {
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/wint-myat-phyo",
+        icon: LinkedInIcon,
+        class: "text-[#0A66C2] hover:opacity-80",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/winmyatphyo99",
+        icon: GitHubIcon,
+
+        // ✅ FIX: no forced white color
+        class: "text-secondary hover:text-primary transition-colors",
+      },
+    ],
   },
 
   profile: {

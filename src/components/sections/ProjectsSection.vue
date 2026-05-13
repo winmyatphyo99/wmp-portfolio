@@ -80,8 +80,7 @@ watch(selectedProject, (val) => {
               </span>
             </div>
 
-            <h2 class="max-w-xl text-3xl md:text-4xl lg:text-[2.5rem]
-              font-bold text-primary leading-tight tracking-tight">
+            <h2 class="max-w-2xl text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-primary leading-tight tracking-tight">
               Production <span class="text-gradient">Systems</span>
             </h2>
 
