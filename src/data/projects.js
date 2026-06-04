@@ -1,5 +1,5 @@
-import tmsImg from "@/assets/projects/tms.png";
-import tmsWebp from "@/assets/projects/tms.webp";
+import tmsImg from "@/assets/projects/Training Management.JPG";
+import tmsWebp from "@/assets/projects/Training Management.webp";
 
 import foodImg from "@/assets/projects/food-order.png";
 import foodWebp from "@/assets/projects/food-order.webp";
@@ -7,8 +7,12 @@ import foodWebp from "@/assets/projects/food-order.webp";
 export const projects = [
   {
     title: "Training Management System (TMS)",
+    category: "Enterprise Platform",
     image: tmsImg,
     imageWebp: tmsWebp,
+    demoUrl: "https://itvisionsoft.com/",
+    githubUrl: "https://github.com/ITVHBaseCode/TrainingManagement",
+
     tags: ["Laravel", "Tailwind CSS", "N-Tier"],
 
     overview:
@@ -17,7 +21,7 @@ export const projects = [
     features: [
       "Automated course and module management",
       "Optimized MySQL database design",
-      "Real-time dashboard with Vue.js"
+      "Real-time dashboard with Tailwind CSS"
     ],
 
     impact:
@@ -26,8 +30,12 @@ export const projects = [
 
   {
     title: "Food Order Management System",
+    category: "Restaurant Solution",
     image: foodImg,
     imageWebp: foodWebp,
+    demoUrl: "https://github.com/winmyatphyo99/food-order",
+    githubUrl: "https://github.com/winmyatphyo99/food-order",
+
     tags: ["PHP MVC", "MySQL", "Invoicing"],
 
     overview:

@@ -83,83 +83,127 @@ const scrollTo = (id) => {
           </div>
         </div>
 
+       
         <!-- RIGHT -->
-        <div class="lg:col-span-7 space-y-8">
+<div class="lg:col-span-7 space-y-8">
 
-          <!-- MAIN CARD -->
-          <div class="relative p-[1px] rounded-3xl overflow-hidden group">
+  <div class="relative p-[1px] rounded-3xl overflow-hidden">
 
+    <div
+      class="absolute inset-0 bg-gradient-to-r
+      from-cyan-500/20 via-purple-500/20 to-cyan-500/20"
+    ></div>
+
+    <div
+      class="relative rounded-[23px] bg-secondary
+      p-8 md:p-10"
+    >
+
+      <div class="space-y-6">
+
+        <div>
+          <span
+            class="text-xs font-black text-purple-400
+            uppercase tracking-widest"
+          >
+            {{ about.content.tag }}
+          </span>
+
+          <h3
+            class="mt-3 text-1xl md:text-2xl
+            font-bold text-primary leading-tight"
+          >
+            {{ about.content.headline }}
+          </h3>
+        </div>
+
+        <p
+          class="text-secondary leading-relaxed
+          text-base md:text-lg"
+        >
+          {{ about.content.description }}
+        </p>
+
+        <!-- HIGHLIGHTS -->
+        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+
+          <div
+            v-for="(item, index) in about.highlights"
+            :key="index"
+            class="flex items-center gap-3"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20"
+              class="w-2 h-2 rounded-full bg-cyan-400"
             ></div>
 
-            <div class="relative p-6 md:p-10 rounded-[23px] bg-secondary space-y-8">
-
-              <div class="flex justify-between items-start">
-
-                <div class="space-y-2">
-                  <span class="text-xs font-black text-purple-400 uppercase tracking-widest">
-                    {{ about.content.tag }}
-                  </span>
-
-                  <h4 class="text-xl md:text-2xl text-primary font-bold leading-tight mt-2">
-                    {{ about.content.headline }}
-                  </h4>
-                </div>
-
-              </div>
-
-              <p class="text-base md:text-lg text-secondary leading-relaxed font-light">
-                {{ about.content.description }}
-              </p>
-
-              <!-- BUTTONS -->
-              <div class="flex flex-wrap gap-4 md:gap-5 pt-4">
-
-                <button
-                  @click="scrollTo(about.cta.primary.target)"
-                  class="px-6 md:px-8 py-3 md:py-4 bg-primary text-primary
-                  border border-border rounded-full font-black text-xs md:text-sm uppercase tracking-wider
-                  hover:bg-accent hover:text-white transition-all"
-                >
-                  {{ about.cta.primary.label }}
-                </button>
-
-                <button
-                  @click="scrollTo(about.cta.secondary.target)"
-                  class="px-6 md:px-8 py-3 md:py-4 border border-border text-primary
-                  rounded-full font-bold text-xs md:text-sm uppercase tracking-wider
-                  hover:bg-surface transition-all"
-                >
-                  {{ about.cta.secondary.label }}
-                </button>
-
-              </div>
-
-            </div>
-          </div>
-
-          <!-- METRICS -->
-          <div class="grid grid-cols-2 gap-4 md:gap-6">
-
-            <div
-              v-for="(item, i) in about.metrics"
-              :key="i"
-              class="h-28 md:h-36 rounded-3xl bg-secondary border border-border
-              flex flex-col justify-center items-center group hover:-translate-y-2 transition-all"
-            >
-              <span class="text-2xl md:text-4xl font-black text-primary group-hover:text-cyan-400 transition-colors">
-                {{ item.value }}
-              </span>
-
-              <span class="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-muted font-bold mt-2 text-center px-2">
-                {{ item.label }}
-              </span>
-            </div>
-
+            <span class="text-secondary">
+              {{ item }}
+            </span>
           </div>
 
         </div>
+
+        <!-- BUTTONS -->
+        <div class="flex flex-wrap gap-4 pt-6">
+
+          <button
+            @click="scrollTo(about.cta.primary.target)"
+            class="px-8 py-4 rounded-full
+            bg-cyan-500 text-black
+            font-black text-sm uppercase
+            tracking-wider
+            hover:scale-105 transition-all"
+          >
+            {{ about.cta.primary.label }}
+          </button>
+
+          <button
+            @click="scrollTo(about.cta.secondary.target)"
+            class="px-8 py-4 rounded-full
+            border border-border
+            text-primary font-bold text-sm
+            uppercase tracking-wider
+            hover:bg-surface transition-all"
+          >
+            {{ about.cta.secondary.label }}
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="grid grid-cols-2 gap-6">
+
+    <div
+      v-for="(item, i) in about.metrics"
+      :key="i"
+      class="h-36 rounded-3xl
+      bg-secondary border border-border
+      flex flex-col justify-center items-center
+      hover:-translate-y-2 transition-all"
+    >
+      <span
+        class="text-4xl font-black text-primary"
+      >
+        {{ item.value }}
+      </span>
+
+      <span
+        class="text-[10px]
+        uppercase tracking-[0.3em]
+        text-muted font-bold mt-3"
+      >
+        {{ item.label }}
+      </span>
+    </div>
+
+  </div>
+
+</div>
       </div>
     </div>
   </section>

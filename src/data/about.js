@@ -1,24 +1,24 @@
 export const about = {
   header: {
-    label: "PROFILE",
+    label: "PROFESSIONAL APPROACH",
     title: {
       line1: "Strong systems built with",
       highlight: "clarity"
     }
   },
 
- content: {
-  tag: "Professional Journey",
+  content: {
+    tag: "How I Work",
 
-  summary:
-    "Backend developer focused on building scalable, secure, and maintainable web applications.",
+    summary:
+      "I focus on designing scalable, secure, and maintainable software that solves real business problems.",
 
-  headline:
-    "Building reliable backend systems for real-world applications",
+    headline:
+      "Building reliable applications through clean architecture and practical engineering.",
 
-  description:
-    "Experienced with Laravel and ASP.NET Core. I build REST APIs, queue systems, and maintain clean, testable architecture."
-},
+    description:
+      "Experienced in Laravel, ASP.NET Core, Vue.js, MySQL, and Docker. I prioritize clean code, performance, maintainability, and collaboration to deliver software that remains reliable as requirements evolve."
+  },
 
   cta: {
     primary: {
@@ -32,14 +32,41 @@ export const about = {
   },
 
   metrics: [
-    { value: "2+", label: "Years Experience" },
-    { value: "Laravel", label: "Specialization" }
+    {
+      value: "5+",
+      label: "Projects Built"
+    },
+    {
+      value: "10+",
+      label: "Business Domains"
+    }
   ],
 
   profile: [
-    { label: "Full Name", value: "Win Myat Phyo" },
-    { label: "Education", value: "B.C.Sc (2024 Graduate)" },
-    { label: "Location", value: "Yangon, Myanmar" },
-    { label: "Focus", value: "Clean | N-Tier Architecture" }
+    {
+      label: "Backend Engineering",
+      value: "Laravel & ASP.NET Core"
+    },
+    {
+      label: "Architecture",
+      value: "Clean & N-Tier Design"
+    },
+    {
+      label: "Database Design",
+      value: "MySQL & SQL Server"
+    },
+    {
+      label: "Collaboration",
+      value: "Agile & Scrum"
+    }
+  ],
+
+  highlights: [
+    "REST API Development",
+    "Enterprise Systems",
+    "Database Optimization",
+    "Performance Tuning",
+    "Role-Based Security",
+    "Team Collaboration"
   ]
 };

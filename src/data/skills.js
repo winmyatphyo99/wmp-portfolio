@@ -1,17 +1,33 @@
 export const skills = {
   backend: {
-    title: "Backend & System Design",
+    title: "Backend Engineering",
     items: [
-      "Laravel (PHP)",
+      "Laravel",
       "ASP.NET Core",
       "RESTful API Development",
-      "MySQL Design & Optimization",
-      "Auth & Authorization",
-      "Clean N-Tier Architecture",
+      "Authentication & Authorization",
+      "Role-Based Access Control (RBAC)",
+      "Clean Architecture",
+      "N-Tier Architecture",
       "SOLID Principles",
-      "Docker (Basic Deployment)",
-      "Git & GitHub",
-    ],
+      "Entity Framework Core",
+      "Background Jobs & Queues"
+    ]
+  },
+
+  database: {
+    title: "Database & Performance",
+    items: [
+      "MySQL",
+      "SQL Server",
+      "Database Design",
+      "Data Modeling",
+      "Query Optimization",
+      "Stored Procedures",
+      "Indexing Strategies",
+      "Eloquent ORM",
+      "Entity Framework"
+    ]
   },
 
   frontend: {
@@ -20,21 +36,26 @@ export const skills = {
       "Vue.js 3",
       "JavaScript (ES6+)",
       "Tailwind CSS",
-      "JQuery & Bootstrap",
-      "Responsive UI Design",
-      "Component-Based Architecture",
-      "HTML5 & CSS3",
-    ],
+      "Bootstrap",
+      "jQuery",
+      "Responsive Web Design",
+      "Component-Based Development",
+      "API Integration"
+    ]
   },
 
   tools: {
     title: "Tools & Workflow",
     items: [
-      "Figma (UI Understanding)",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Docker",
+      "Postman",
       "Vite",
-      "npm / Composer",
-      "Postman (API Testing)",
-      "Git Workflow",
-    ],
-  },
+      "Agile Development",
+      "Scrum Collaboration",
+      "CI/CD Fundamentals"
+    ]
+  }
 };
