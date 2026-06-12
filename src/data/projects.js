@@ -1,4 +1,4 @@
-import tmsImg from "@/assets/projects/Training Management.JPG";
+import tmsImg from "@/assets/projects/Training Management.png";
 import tmsWebp from "@/assets/projects/Training Management.webp";
 
 import foodImg from "@/assets/projects/food-order.png";
@@ -36,7 +36,7 @@ export const projects = [
     demoUrl: "https://github.com/winmyatphyo99/food-order",
     githubUrl: "https://github.com/winmyatphyo99/food-order",
 
-    tags: ["PHP MVC", "MySQL", "Invoicing"],
+    tags: ["PHP MVC", "MySQL", "N-Tier Architecture"],
 
     overview:
       "Restaurant ordering and billing system for small to mid-sized businesses.",
