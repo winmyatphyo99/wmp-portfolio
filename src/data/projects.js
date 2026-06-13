@@ -1,6 +1,7 @@
 import tmsImg from "@/assets/projects/Training Management.png";
 import tmsWebp from "@/assets/projects/Training Management.webp";
-
+import empImg from "@/assets/projects/employee-management.png";
+import empWebp from "@/assets/projects/employee-management.webp";
 import foodImg from "@/assets/projects/food-order.png";
 import foodWebp from "@/assets/projects/food-order.webp";
 
@@ -11,7 +12,7 @@ export const projects = [
     image: tmsImg,
     imageWebp: tmsWebp,
     demoUrl: "https://itvisionsoft.com/",
-    githubUrl: "https://github.com/ITVHBaseCode/TrainingManagement",
+    githubUrl: "https://itvisionsoft.com/",
 
     tags: ["Laravel", "Tailwind CSS", "N-Tier"],
 
@@ -49,5 +50,29 @@ export const projects = [
 
     impact:
       "Reduced manual invoicing time by 80% and improved operational efficiency"
-  }
+  },
+  {
+  title: "Employee Management System",
+  category: "Enterprise HR Solution",
+
+  image: empImg,
+  imageWebp: empWebp,
+
+  demoUrl: "https://github.com/winmyatphyo99/EmployeeManagementApp",
+  githubUrl: "https://github.com/winmyatphyo99/EmployeeManagementApp",
+
+  tags: ["ASP.NET Core", "SQL Server", "Clean Architecture"],
+
+  overview:
+    "Enterprise HR system for managing employees, payroll, and leave workflows.",
+
+  features: [
+    "Employee and department management",
+    "Payroll and leave approval workflows",
+    "Role-based authentication and authorization"
+  ],
+
+  impact:
+    "Improved HR efficiency through centralized employee records and automated workflows."
+}
 ];

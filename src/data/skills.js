@@ -1,6 +1,7 @@
 export const skills = {
   backend: {
     title: "Backend Engineering",
+    description: "Architecting and building high-performance enterprise applications prioritizing clean architecture principles, strict authentication layers, and robust RESTful API structures.",
     items: [
       "Laravel",
       "ASP.NET Core",
@@ -17,6 +18,7 @@ export const skills = {
 
   database: {
     title: "Database & Performance",
+    description: "Designing efficient database structures, modeling entity schemas, and processing heavy workloads through optimized query syntax and strategic indexing.",
     items: [
       "MySQL",
       "SQL Server",
@@ -32,6 +34,7 @@ export const skills = {
 
   frontend: {
     title: "Frontend Development",
+    description: "Creating responsive user interfaces with seamless API integration, leveraging component-based architecture to deliver fast, modular web experiences.",
     items: [
       "Vue.js 3",
       "JavaScript (ES6+)",
@@ -46,6 +49,7 @@ export const skills = {
 
   tools: {
     title: "Tools & Workflow",
+    description: "Managing application deployment workflows, version control systems, containerization, and cross-functional agile engineering workflows for reliable systems.",
     items: [
       "Git",
       "GitHub",

@@ -132,7 +132,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="bg-[#FDFDFD] text-slate-800 font-sans">
+  <div class="bg-primary text-primary font-sans min-h-screen">
 
     <!-- HEADER -->
     <AppHeader :sections="sections" :activeSection="activeSection" @navigate="handleNavigate" />
@@ -144,19 +144,19 @@ onMounted(() => {
       <SkillsSection id="skills" :skills="skills" />
       <ServicesSection id="services" :services="services" />
       <!-- For Lazy Load for projectionSection -->
-      <section id="projects" ref="projectsRef">
-        <Suspense>
-          <template #default>
-            <ProjectsSection v-if="showProjects" :projects="projects" />
-          </template>
+      <section id="projects" ref="projectsRef" class="min-h-[400px]">
+  <Suspense>
+    <template #default>
+      <ProjectsSection v-if="showProjects" :projects="projects" />
+    </template>
 
-          <template #fallback>
-            <div class="py-24 text-center text-slate-400">
-              Loading projects...
-            </div>
-          </template>
-        </Suspense>
-      </section>
+    <template #fallback>
+      <div class="py-24 text-center text-slate-400">
+        Loading projects...
+      </div>
+    </template>
+  </Suspense>
+</section>
       <ContactSection id="contact" :contact="contact" />
     </main>
 
