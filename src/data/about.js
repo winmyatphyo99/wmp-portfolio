@@ -15,18 +15,18 @@ export const about = {
   },
 
   experience: [
-    {
-      company: "ITVision Hub",
-      position: "Backend Developer (ASP.NET Core)",
-      startYear: "Apr 2026",
-      endYear: "Present",
-      achievements: [
-        "Architecting and building high-performance enterprise web applications using C#, ASP.NET Core, and .NET Framework architectures.",
-        "Designing highly structured database schemas and processing logic within enterprise SQL Server instances.",
-        "Developing robust RESTful API structures prioritizing clean architecture principles, strict authentication layers, and secure access bounds.",
-        "Optimizing data-query flows and integrating vital third-party system components to serve high-availability business environments."
-      ]
-    },
+    // {
+    //   company: "ITVision Hub",
+    //   position: "Backend Developer (ASP.NET Core)",
+    //   startYear: "Apr 2026",
+    //   endYear: "Present",
+    //   achievements: [
+    //     "Architecting and building high-performance enterprise web applications using C#, ASP.NET Core, and .NET Framework architectures.",
+    //     "Designing highly structured database schemas and processing logic within enterprise SQL Server instances.",
+    //     "Developing robust RESTful API structures prioritizing clean architecture principles, strict authentication layers, and secure access bounds.",
+    //     "Optimizing data-query flows and integrating vital third-party system components to serve high-availability business environments."
+    //   ]
+    // },
     {
       company: "ITVision Hub",
       position: "Full-Stack Web Developer (Laravel)",
@@ -39,17 +39,17 @@ export const about = {
         "Utilized Docker containers to streamline deployment cycles, verify environmental parity, and optimize system maintenance tracks."
       ]
     },
-    {
-      company: "Global Earth Agro & Aqua",
-      position: "Management Trainee (Operations & Technology)",
-      startYear: "Jan 2023",
-      endYear: "Dec 2023",
-      achievements: [
-        "Engaged in a comprehensive technology and facilities program, evaluating data center operations, network structures, and facility system controls.",
-        "Analyzed industrial operations data streams across automated manufacturing components, quality checking bays, and multi-tier logistics workflows.",
-        "Coordinated with cross-functional industrial operation panels to solve hardware-software bottlenecks in large-scale production spaces."
-      ]
-    }
+    // {
+    //   company: "Global Earth Agro & Aqua",
+    //   position: "Management Trainee (Operations & Technology)",
+    //   startYear: "Jan 2023",
+    //   endYear: "Dec 2023",
+    //   achievements: [
+    //     "Engaged in a comprehensive technology and facilities program, evaluating data center operations, network structures, and facility system controls.",
+    //     "Analyzed industrial operations data streams across automated manufacturing components, quality checking bays, and multi-tier logistics workflows.",
+    //     "Coordinated with cross-functional industrial operation panels to solve hardware-software bottlenecks in large-scale production spaces."
+    //   ]
+    // }
   ],
 
   cta: {
